@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Profile - WinR666</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand">WinR666</div></header>
+  <main class="container">
+    <div class="card">
+      <h3>প্রোফাইল</h3>
+      <p>নাম: <span id="pname"></span></p>
+      <p>ফোন: <span id="pphone"></span></p>
+      <p>ব্যালেন্স: <strong id="pbal">৳0</strong></p>
+
+      <h4>রেফার লিংক</h4>
+      <div class="ref-box" id="refBox"></div>
+
+      <h4>Withdraw Request</h4>
+      <input id="wdAmount" type="number" placeholder="Amount" />
+      <input id="wdNumber" placeholder="আপনার টাকা পাবেন এমন ফোন নম্বর" />
+      <button class="btn btn-primary" onclick="submitWithdraw()">Withdraw Request</button>
+    </div>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Deposit - WinR666</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand">WinR666</div></header>
+  <main class="container">
+    <div class="card">
+      <h3>ডিপোজিট - বিকাশ / নগদ / রকেট</h3>
+      <p>পেমেন্ট করার পরে ট্রানজেকশন আইডি এখানে দিন — অ্যাডমিন যাচাই করে ব্যালেন্স জুড়বেন।</p>
+
+      <label>পে মেথড</label>
+      <select id="payMethod">
+        <option value="bkash">Bkash</option>
+        <option value="nagad">Nagad</option>
+        <option value="rocket">Rocket</option>
+      </select>
+
+      <label>অ্যামাউন্ট</label>
+      <input id="depositAmount" type="number" placeholder="৳100" />
+
+      <label>Transaction / Trx ID</label>
+      <input id="depositTrx" placeholder="Txn ID" />
+
+      <button class="btn btn-primary" onclick="submitDeposit()">Submit Deposit</button>
+      <p class="muted">নোট: এটি ডেমো ব্যালেন্স অ্যাড করতে admin ভেরিফাই করবে।</p>
+    </div>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
