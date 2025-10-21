@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="bn">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home - WinR666</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Home - WinR666</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
@@ -17,16 +17,21 @@
 
   <main class="container">
     <section class="row">
-      <div class="card promo">
-        <h3>অ্যাপ ডাউনলোড</h3>
-        <p>অ্যাপ দিয়ে দ্রুত খেলুন</p>
-        <a class="btn btn-gold" id="apkDownload" href="https://winr666.app/download">APK ডাউনলোড</a>
+      <div class="card promo big-promo">
+        <div class="promo-left">
+          <h3>অ্যাপ ডাউনলোড</h3>
+          <p>অ্যাপ দিয়ে দ্রুত খেলুন।</p>
+          <a class="btn btn-gold" id="apkDownload" href="https://winr666.app/download">APK ডাউনলোড</a>
+        </div>
+        <div class="promo-right">
+          <div class="jackpot">JACKPOTS <br><strong id="jackAmt">12,113,955.83</strong></div>
+        </div>
       </div>
 
       <div class="card games">
         <h3>গেমস</h3>
         <div class="game-grid" id="gameGrid">
-          <!-- generate game buttons -->
+          <!-- game icons -->
         </div>
       </div>
     </section>
@@ -39,7 +44,7 @@
         </ul>
       </div>
 
-      <div class="card">
+      <div class="card quick-links">
         <h3>দ্রুত লিংক</h3>
         <a class="btn" href="deposit.html">ডিপোজিট</a>
         <a class="btn" href="profile.html">প্রোফাইল</a>
@@ -49,21 +54,20 @@
 
 <script src="script.js"></script>
 <script>
-  // populate games dynamically (36 sample names)
-  const games = [
-"🎰 Slot Machine","🎲 Dice Roll","🃏 Poker","♠️ Blackjack","🃏 Teen Patti","🔴⚫ Roulette","🃏 Baccarat","🀄 Dragon Tiger","🎮 Lucky Wheel","🃏 Rummy","🎯 Number Guessing","🧩 Scratch Card","🪙 Coin Toss","🎲 Sic Bo","🃏 Andar Bahar","🃏 Keno","🎮 Ludo","🎲 Craps","🃏 Video Poker","🎰 Progressive Jackpot","🧮 Mini Lottery","🀄 Mahjong","🃏 Card Hi-Lo","🎯 Wheel of Fortune","🧩 Bingo","🎰 Multi-Line Slot","🃏 Joker Wild","🎮 Lucky Number","🃏 Casino War","🎮 Super Ace","🎮 Fortune Gems 2","🎮 Fortune Gems 3","🎮 Super Ace Deluxe","🎮 Money Coming","🎮 Aviator"
-  ];
-  const grid = document.getElementById('gameGrid');
-  games.forEach(g=>{
-    const b=document.createElement('button');
-    b.className='game-btn';
-    b.innerText=g;
-    b.onclick = ()=> alert('সময় আসলে এখানে গেম লোড হবে — '+g);
-    grid.appendChild(b);
-  });
-
-  // show balance from script.js
-  updateBalanceUI();
+// sample games list with labels and icon placeholders
+const games = [
+  {k:'aviator', t:'Aviator'}, {k:'superace', t:'Super Ace'}, {k:'fortune2', t:'Fortune Gems 2'},
+  {k:'slot', t:'Super Slot'}, {k:'dice', t:'Dice Roll'}, {k:'poker', t:'Poker'}
+];
+const grid = document.getElementById('gameGrid');
+games.forEach(g=>{
+  const card = document.createElement('div');
+  card.className='game-card';
+  card.innerHTML = `<div class="game-icon"><img src="assets/${g.k}.png" alt="${g.t}"/></div><div class="game-title">${g.t}</div>`;
+  card.onclick = ()=> alert('Coming soon — '+g.t);
+  grid.appendChild(card);
+});
+updateBalanceUI();
 </script>
 </body>
 </html>
