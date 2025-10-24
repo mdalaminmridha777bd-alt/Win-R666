@@ -1,0 +1,1 @@
+require('dotenv').config(); const express=require('express'); const app=express(); app.use(express.json()); const cfg=require('./config'); const PORT=cfg.PORT||3000; app.get('/api/ping',(req,res)=>res.json({ok:true})); app.listen(PORT,()=>console.log('API running',PORT));

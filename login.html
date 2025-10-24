@@ -1,41 +1,6 @@
-<!doctype html>
-<html lang="bn">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login - WinR666</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">WinR666</div>
-    </header>
-
-    <main class="card auth-card">
-      <h2>লগইন / রেজিস্টার (ফোন দিয়ে)</h2>
-
-      <div id="auth-forms">
-        <div id="login-form">
-          <input id="login-phone" placeholder="ফোন নম্বর (উদাহরণ: 017XXXXXXXX)" type="tel" />
-          <button class="btn btn-primary" onclick="doLoginPhone()">লগইন</button>
-          <p class="muted">নতুন? <a href="#" onclick="showRegister()">রেজিস্টার করুন</a></p>
-        </div>
-
-        <div id="register-form" style="display:none">
-          <input id="reg-name" placeholder="নাম" />
-          <input id="reg-phone" placeholder="ফোন নম্বর" type="tel"/>
-          <button class="btn btn-primary" onclick="doRegisterPhone()">রেজিস্টার</button>
-          <p class="muted">পরে? <a href="#" onclick="showLogin()">লগইন করুন</a></p>
-        </div>
-      </div>
-    </main>
-
-    <footer class="bottom-note">
-      <a href="index.html">মূল পেজে ফিরে যান</a>
-    </footer>
-  </div>
-
-<script src="script.js"></script>
-</body>
-</html>
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Login</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="topbar"><div class="brand">Win-R666</div></header>
+<main class="container"><h2>লগইন / রেজিস্টার</h2>
+<div id="loginForm"><input id="phone" placeholder="Phone"><input id="password" type="password" placeholder="Password"><button onclick="doLogin()">Login</button><p>New? <a href="#" onclick="showRegister()">Register</a></p></div>
+<div id="registerForm" style="display:none"><input id="rname" placeholder="Name"><input id="rphone" placeholder="Phone"><input id="rpass" placeholder="Password"><button onclick="doRegister()">Register</button></div>
+</main><script src="script.js"></script></body></html>
